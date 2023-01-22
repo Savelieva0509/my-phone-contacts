@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/382.c1aa1420.chunk.css","mappings":"AAAA,sBACI,WACJ,CAEA,uBACI,YAAa,CACb,qBAAsB,CACtB,kBACJ","sources":["pages/Register/Register.module.css"],"sourcesContent":[".form {\n    width: 320px;\n}\n\n.label {\n    display: flex;\n    flex-direction: column;\n    margin-bottom: 16px;\n}"],"names":[],"sourceRoot":""}

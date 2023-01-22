@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[75],{6075:function(e,n,r){r.r(n),r.d(n,{default:function(){return i}});var a=r(3329);function i(){return(0,a.jsx)("div",{children:(0,a.jsxs)("h1",{children:["Task manager welcome page"," ",(0,a.jsx)("span",{role:"img","aria-label":"Greeting icon",children:"\ud83d\udc81\u200d\u2640\ufe0f"})]})})}}}]);
+//# sourceMappingURL=75.852c9aae.chunk.js.map
