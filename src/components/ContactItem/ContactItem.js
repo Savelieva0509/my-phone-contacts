@@ -5,14 +5,14 @@ import { ReactComponent as DeleteIcon } from '../icons/delete.svg';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/contactsOperations';
 
-const ContactItem = ({ id, name, phone }) => {
+const ContactItem = ({ id, name, number }) => {
   const dispatch = useDispatch();
   const onDeleteContact = id => dispatch(deleteContact(id));
 
   return (
     <li key={id} className={css.contactsList__item}>
       <p>
-        {name}: {phone}
+        {name}: {number}
       </p>
 
       <IconButton
@@ -34,7 +34,7 @@ const ContactItem = ({ id, name, phone }) => {
 ContactItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
 };
 
 export default ContactItem;
