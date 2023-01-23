@@ -1,17 +1,11 @@
-import { lazy, Suspense } from 'react';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Routes } from 'react-router-dom';
-// import Home from "pages/Home/Home";
-// import Register from "pages/Register/Register";
-// import Login from "pages/Login/Login";
-// import Contacts from "pages/Contacts/Contacts";
-import Container from './Container/Container';
-import AppBar from './AppBar/AppBar';
-import { fetchCurrentUser } from 'redux/auth/authOperations';
-import PrivateRoute from './PrivateRoute';
-import PublicRoute from './PublicRoute';
-import authSelectors from 'redux/auth/authSelectors';
+import { useAuth } from 'hooks';
+import { lazy, useEffect} from 'react';
+import { useDispatch } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import { refreshUser } from 'redux/auth/authOperations';
+import { Layout } from './Layout/Layout';
+import { RestrictedRoute } from './RestrictedRoute';
+import { PrivateRoute } from './PrivateRoute';
 
 const HomePage = lazy(() => import('pages/Home/Home'));
 const RegisterPage = lazy(() => import('pages/Register/Register'));
@@ -20,34 +14,43 @@ const ContactsPage = lazy(() => import('pages/Contacts/Contacts'));
 
 const App = () => {
   const dispatch = useDispatch();
-  const isFetchingCurrentUser = useSelector(authSelectors.getIsFechingCurrent);
+  const { isRefreshing } = useAuth();
 
   useEffect(() => {
-    dispatch(fetchCurrentUser());
+    dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
-    !isFetchingCurrentUser && (
-      <Container>
-        <AppBar />
-
-        <Routes>
-          <Suspense fallback={<p>Загружаем...</p>}>
-            <PublicRoute exact="true" path="/">
-              <HomePage />
-            </PublicRoute>
-            <PublicRoute path="/register" restricted>
-              <RegisterPage />
-            </PublicRoute>
-            <PublicRoute path="/login" restricted redirectTo="/contacts">
-              <LoginPage />
-            </PublicRoute>
-            <PrivateRoute path="/contacts" redirectTo="/login">
-              <ContactsPage />
-            </PrivateRoute>
-          </Suspense>
-        </Routes>
-      </Container>
+   return (
+    !isRefreshing && (
+      <Routes>
+        <Route path="/" element={<Layout />} className="container">
+          <Route index element={<HomePage />} />
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute
+                component={<RegisterPage />}
+                redirectTo="/contacts"
+              />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute
+                component={<LoginPage />}
+                redirectTo="/contacts"
+              />
+            }
+          />
+          <Route
+            path="/contacts"
+            element={
+              <PrivateRoute component={<ContactsPage />} redirectTo="/login" />
+            }
+          />
+        </Route>
+      </Routes>
     )
   );
 };
