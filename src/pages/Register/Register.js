@@ -46,9 +46,9 @@ const RegisterForm = () => {
       >
         <Typography
           variant="h4"
-          style={{ fontFamily: 'Caveat', fontWeight: '600' }}
+         style={{ fontFamily: 'Segoe UI', fontWeight: '400', color: 'rgb(66, 91, 115)'  }}
         >
-          Sign Up
+          Register
         </Typography>
         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
           <TextField
@@ -93,7 +93,7 @@ const RegisterForm = () => {
             type="submit"
             fullWidth
             variant="contained"
-            sx={{ mt: 3, mb: 2, color: '#0f1111', background: 'd4abca' }}
+            sx={{ mt: 3, mb: 2, color: 'white', background: 'd4abca' }}
           >
             Sign Up
           </Button>
