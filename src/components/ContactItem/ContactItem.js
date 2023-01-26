@@ -20,7 +20,7 @@ const ContactItem = ({ id, name, number }) => {
         type="submit"
         variant="contained"
         size="small"
-        sx={{ mt: 3, color: 'white', background: 'd4abca' }}
+        sx={{ color: 'white', background: 'd4abca' }}
       >
         <DeleteIcon className={css.deleteIcon} />
         DELETE

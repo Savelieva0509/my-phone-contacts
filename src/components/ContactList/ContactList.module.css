@@ -1,6 +1,7 @@
 .contactsList {
   list-style: none;
   width: 50%;
+  max-width: 450px;
   padding: 20px;
   margin: 0 auto;
 }
