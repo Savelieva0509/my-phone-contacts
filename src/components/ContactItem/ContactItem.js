@@ -1,4 +1,3 @@
-// import IconButton from 'components/IconButton/IconButton';
 import PropTypes from 'prop-types';
 import css from './ContactItem.module.css';
 import { ReactComponent as DeleteIcon } from '../icons/delete.svg';

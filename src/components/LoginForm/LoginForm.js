@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { logIn } from 'redux/auth/authOperations';
-// import css from './LoginForm.module.css';
 import { Button, TextField, Box, Container, Typography } from '@mui/material';
 
 const LoginForm = () => {
@@ -44,9 +43,13 @@ const LoginForm = () => {
       >
         <Typography
           variant="h4"
-          style={{ fontFamily: 'Segoe UI', fontWeight: '400', color: 'rgb(66, 91, 115)' }}
+          style={{
+            fontFamily: 'Segoe UI',
+            fontWeight: '400',
+            color: 'rgb(66, 91, 115)',
+          }}
         >
-        Account
+          Account
         </Typography>
         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
           <TextField
@@ -92,6 +95,6 @@ const LoginForm = () => {
       </Box>
     </Container>
   );
-}
+};
 
 export default LoginForm;

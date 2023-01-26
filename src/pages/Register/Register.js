@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { register } from 'redux/auth/authOperations';
-// import css from './Register.module.css';
 import { Button, TextField, Box, Container, Typography } from '@mui/material';
 
 const RegisterForm = () => {
@@ -10,7 +9,7 @@ const RegisterForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-    const handleChange = ({ target: { name, value } }) => {
+  const handleChange = ({ target: { name, value } }) => {
     switch (name) {
       case 'name':
         return setName(value);
@@ -22,16 +21,16 @@ const RegisterForm = () => {
         return;
     }
   };
-    
-    const handleSubmit = e => {
+
+  const handleSubmit = e => {
     e.preventDefault();
     dispatch(register({ name, email, password }));
     setName('');
     setEmail('');
     setPassword('');
-    };
-    
- return (
+  };
+
+  return (
     <Container component="div" maxWidth="xs">
       <Box
         sx={{
@@ -39,14 +38,18 @@ const RegisterForm = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          backgroundColor:  'white',
+          backgroundColor: 'white',
           padding: '20px',
           boxShadow: ' rgb(33 33 33) 0px 2px 10px 1px',
         }}
       >
         <Typography
           variant="h4"
-         style={{ fontFamily: 'Segoe UI', fontWeight: '400', color: 'rgb(66, 91, 115)'  }}
+          style={{
+            fontFamily: 'Segoe UI',
+            fontWeight: '400',
+            color: 'rgb(66, 91, 115)',
+          }}
         >
           Register
         </Typography>
@@ -73,8 +76,7 @@ const RegisterForm = () => {
             type="email"
             value={email}
             variant="standard"
-           onChange={handleChange}
-          
+            onChange={handleChange}
           />
           <TextField
             margin="normal"
@@ -101,7 +103,6 @@ const RegisterForm = () => {
       </Box>
     </Container>
   );
-}
-
+};
 
 export default RegisterForm;

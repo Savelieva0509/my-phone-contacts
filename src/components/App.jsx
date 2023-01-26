@@ -1,5 +1,5 @@
 import { useAuth } from 'hooks';
-import { lazy, useEffect} from 'react';
+import { lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { refreshUser } from 'redux/auth/authOperations';
@@ -20,7 +20,7 @@ const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-   return (
+  return (
     !isRefreshing && (
       <Routes>
         <Route path="/" element={<Layout />} className="container">

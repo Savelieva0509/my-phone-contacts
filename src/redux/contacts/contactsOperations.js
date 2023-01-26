@@ -2,7 +2,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import shortid from 'shortid';
 
-
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
 
