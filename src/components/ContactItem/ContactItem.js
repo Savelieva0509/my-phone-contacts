@@ -16,34 +16,16 @@ const ContactItem = ({ id, name, number }) => {
         {name}: {number}
       </p>
 
-      {/* <IconButton
-        className={css.contactsList__button}
-        onClick={() => onDeleteContact(id)}
-      >
-        <DeleteIcon
-          className={css.deleteIcon}
-          width="20"
-          height="20"
-          fill="#fff"
-        />
-        Delete
-      </IconButton> */}
-
       <Button
-        // className={css.contactsList__button}
         onClick={() => onDeleteContact(id)}
-            type="submit"
-            variant="contained"
-            sx={{ mt: 3, mb: 2, color: 'white', background: 'd4abca' }}
+        type="submit"
+        variant="contained"
+        size="small"
+        sx={{ mt: 3, color: 'white', background: 'd4abca' }}
       >
-        <DeleteIcon
-          className={css.deleteIcon}
-          width="20"
-          height="20"
-          fill="#fff"
-        />
-            DELETE
-          </Button>
+        <DeleteIcon className={css.deleteIcon} />
+        DELETE
+      </Button>
     </li>
   );
 };

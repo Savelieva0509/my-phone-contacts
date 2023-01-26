@@ -1,5 +1,4 @@
 import { useSelector, useDispatch } from 'react-redux';
-// import css from './Filter.module.css';
 import { getFilter } from 'redux/contacts/contactsSelectors';
 import { changeFilter } from 'redux/contacts/filterSlice';
 import { TextField, Box, Container, Typography } from '@mui/material';
