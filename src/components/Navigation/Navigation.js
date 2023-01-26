@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useAuth } from 'hooks';
-
+import { clsx } from 'clsx';
 import css from './Navigation.module.css';
 
 const Navigation = () => {
@@ -8,15 +8,8 @@ const Navigation = () => {
   
   return (
     <nav>
-      <NavLink className={css.link} to="/">
-        Home
-      </NavLink>
-
-      {isLoggedIn && (
-        <NavLink className={css.link} to="/contacts">
-          Contacts
-        </NavLink>
-      )}
+      <NavLink className={({isActive})=>isActive? clsx(css.link,css.active) :css.link} to="/">Home</NavLink>
+        {isLoggedIn && <NavLink className={({isActive})=>isActive? clsx(css.link,css.active) :css.link} to="/contacts">Contacts</NavLink>}
     </nav>
   );
 };

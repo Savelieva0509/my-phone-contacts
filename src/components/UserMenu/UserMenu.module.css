@@ -1,0 +1,11 @@
+.userWwrapper {
+    display: flex;
+    align-items: center;
+}
+
+.userName {
+    font-size: 20px;
+    color: rgb(66, 91, 115);
+    margin-right: 10px;
+}
+
