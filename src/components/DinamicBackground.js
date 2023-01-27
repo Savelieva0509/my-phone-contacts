@@ -1,11 +1,19 @@
+import React, { useState, useEffect, useRef } from 'react'
+import BIRDS from 'vanta/dist/vanta.birds.min'
 
-// VANTA.BIRDS({
-//   el: ".homePage",
-//   mouseControls: true,
-//   touchControls: true,
-//   gyroControls: false,
-//   minHeight: 200.00,
-//   minWidth: 200.00,
-//   scale: 1.00,
-//   scaleMobile: 1.00
-// })
+export const Birds = (props) => {
+  const [vantaEffect, setVantaEffect] = useState(null)
+  const myRef = useRef(null)
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(BIRDS({
+        el: myRef.current
+      }))
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect])
+  return <div ref={myRef}>
+  </div>
+}
