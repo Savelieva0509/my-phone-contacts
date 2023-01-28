@@ -1,11 +1,11 @@
 import css from './Home.module.css'; 
-import { Birds } from 'components/DinamicBackground';
+import  Birds  from 'components/DinamicBackground';
 
 export default function Home() {
   return (
-   
-    <div className={css.homePage} id="homePage">
-      <Birds />
+    <>
+      <Birds className={css.Birds} />
+      <div className={css.homePage} id="#homePage">
       <div className={css.homePageContainer}>
         <h1 className={css.homeTitle}>
         Hello, this is your PhoneBook. It is designed to help your brain not
@@ -14,6 +14,9 @@ export default function Home() {
       </h1>
         </div>
       </div>
+    </>
+   
+    
     
   );
 }

@@ -1,19 +1,46 @@
-import React, { useState, useEffect, useRef } from 'react'
-import BIRDS from 'vanta/dist/vanta.birds.min'
+import React from 'react';
+import * as THREE from 'three';
+import GLOBE from 'vanta/dist/vanta.globe.min.js';
 
-export const Birds = (props) => {
-  const [vantaEffect, setVantaEffect] = useState(null)
-  const myRef = useRef(null)
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(BIRDS({
-        el: myRef.current
-      }))
+class Birds extends React.Component {
+  constructor() {
+    super();
+    this.vantaRef = React.createRef();
+  }
+  componentDidMount() {
+    this.vantaEffect = GLOBE({
+      el: this.vantaRef.current,
+      THREE: THREE,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      backgroundColor: 'rgba(148,187,233,1)',
+      color: '#be8ba2',
+      position: 'relative',
+    });
+  }
+  componentWillUnmount() {
+    if (this.vantaEffect) {
+      this.vantaEffect.destroy();
     }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect])
-  return <div ref={myRef}>
-  </div>
+  }
+  render() {
+    return (
+      <div
+        style={{
+          height: '100vh',
+          width: '100%',
+          position: 'absolute',
+          zIndex: '-10',
+        }}
+        ref={this.vantaRef}
+      ></div>
+    );
+  }
 }
+
+export default Birds;
