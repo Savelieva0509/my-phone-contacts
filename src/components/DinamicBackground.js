@@ -2,7 +2,7 @@ import React from 'react';
 import * as THREE from 'three';
 import GLOBE from 'vanta/dist/vanta.globe.min.js';
 
-class Birds extends React.Component {
+class Globe extends React.Component {
   constructor() {
     super();
     this.vantaRef = React.createRef();
@@ -43,4 +43,4 @@ class Birds extends React.Component {
   }
 }
 
-export default Birds;
+export default Globe;

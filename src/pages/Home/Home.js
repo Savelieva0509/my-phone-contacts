@@ -1,10 +1,10 @@
 import css from './Home.module.css'; 
-import  Birds  from 'components/DinamicBackground';
+import  Globe  from 'components/DinamicBackground';
 
 export default function Home() {
   return (
     <>
-      <Birds className={css.Birds} />
+      <Globe className={css.Birds} />
       <div className={css.homePage} id="#homePage">
       <div className={css.homePageContainer}>
         <h1 className={css.homeTitle}>
