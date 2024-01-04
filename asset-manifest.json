@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-phone-contacts/static/css/main.aa00aa12.css",
-    "main.js": "/my-phone-contacts/static/js/main.709e9c60.js",
+    "main.js": "/my-phone-contacts/static/js/main.e470dd61.js",
     "static/css/793.4680a78c.chunk.css": "/my-phone-contacts/static/css/793.4680a78c.chunk.css",
     "static/js/793.bdb33862.chunk.js": "/my-phone-contacts/static/js/793.bdb33862.chunk.js",
     "static/js/959.750a8549.chunk.js": "/my-phone-contacts/static/js/959.750a8549.chunk.js",
@@ -15,7 +15,7 @@
     "static/media/delete.svg": "/my-phone-contacts/static/media/delete.46a06d843c3d50796190d72acf76a140.svg",
     "index.html": "/my-phone-contacts/index.html",
     "main.aa00aa12.css.map": "/my-phone-contacts/static/css/main.aa00aa12.css.map",
-    "main.709e9c60.js.map": "/my-phone-contacts/static/js/main.709e9c60.js.map",
+    "main.e470dd61.js.map": "/my-phone-contacts/static/js/main.e470dd61.js.map",
     "793.4680a78c.chunk.css.map": "/my-phone-contacts/static/css/793.4680a78c.chunk.css.map",
     "793.bdb33862.chunk.js.map": "/my-phone-contacts/static/js/793.bdb33862.chunk.js.map",
     "959.750a8549.chunk.js.map": "/my-phone-contacts/static/js/959.750a8549.chunk.js.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.aa00aa12.css",
-    "static/js/main.709e9c60.js"
+    "static/js/main.e470dd61.js"
   ]
 }
