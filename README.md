@@ -11,3 +11,8 @@ Simple study web app to store contacts in a cloud. Register your account or log 
 <li>MUI components</li>
 <li>Axios</li>
 <li>Animation Vanta</li>
+
+<p>To skip the registration stage, you can use these data for login</p>
+        "name": "nazar2015",
+        "email": "nazar2015@gmail.com"
+    
