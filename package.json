@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-08-phonebook",
+  "name": "my-phone-contacts",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Savelieva0509.github.io/goit-react-hw-08-phonebook/",
+  "homepage": "https://Savelieva0509.github.io/my-phone-contacts/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
