@@ -12,8 +12,8 @@ Simple study web app to store contacts in a cloud. Register your account or log 
 <li>Axios</li>
 <li>Animation Vanta</li>
 
-<p>To skip the registration stage, you can use these data for login</p>
-<p>email:"nazar2015@gmail.com"</p>
-<p>password: "1234568"</p>
+**To skip the registration stage, you can use these data for login**
+<span>email: nazar2015@gmail.com </span>
+<span>password: 1234568 </span>
        
     
