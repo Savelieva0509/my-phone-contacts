@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "my-phone-contacts",
+  "name": "Create my-phone-contacts Sample",
   "icons": [
     {
       "src": "favicon.ico",
